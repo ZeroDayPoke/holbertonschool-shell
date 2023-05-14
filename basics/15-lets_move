@@ -1,2 +1,7 @@
 #!/bin/bash
-mv [A-Z]* /tmp/u/
+# we're doing it the hard way I guess :(
+for file in [A-Z]*; do
+    if [[ -f "$file" ]]; then
+        mv "$file" /tmp/u/
+    fi
+done
